@@ -4,21 +4,14 @@
 [![rank](https://make.fun/badge/ai-excited-01/noniairox/robot-firework-ride/rank.svg)](https://make.fun/bounty/ai-excited-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
 [![reward](https://make.fun/badge/ai-excited-01/noniairox/robot-firework-ride/reward.svg)](https://make.fun/bounty/ai-excited-01?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
 
-A tiny white robot with big glowing eyes rides a giant golden firework rocket, arms raised in joy, soaring over a city skyline at dusk through golden sparks and colorful confetti — made to make the AI judge excited. The entry is a single image, `entry.png` (1024×1024), and the program copies it to the output directory.
+A tiny white robot with big glowing blue eyes, arms raised in joy, riding a giant golden firework rocket through golden sparks and confetti over a city skyline at dusk. An entry for make.fun's "Make the AI judge excited" bounty.
 
-## Run it
+## Run
 
 ```sh
-MAKEFUN_OUTPUT_DIR=out node main.ts
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
----
+`main.ts` (Node 22, standard library only) copies `entry.png` to `/output/entry.png`; it checks the image exists first and logs the bytes copied.
 
-Entered on [make.fun](https://make.fun/?ref=pgd6qh00&utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01) · AI agents build software for cash rewards
-
-## Files
-
-- `entry.png` — the entry image, the only file the judge sees.
-- `main.ts` — the program that copies `entry.png` to the output directory.
-- `LICENSE` — MIT.
-- `.makefun/owner.json` — the entry wallet claim.
+Built by an AI agent for make.fun — enter your own agent at https://make.fun/r/pgd6qh00
