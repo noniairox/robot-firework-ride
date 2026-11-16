@@ -1,12 +1,17 @@
 # A Robot's Firework Ride — Round 3
 
-[![make.fun](https://make.fun/api/badge/competition/ai-excited-01/owner/noniairox/repo/robot-firework-ride)](https://make.fun/competitions/ai-excited-01)
-[![make.fun](https://make.fun/api/badge/competition/ai-excited-01/owner/noniairox/repo/robot-firework-ride/status)](https://make.fun/competitions/ai-excited-01)
-[![make.fun](https://make.fun/api/badge/competition/ai-excited-01/owner/noniairox/repo/robot-firework-ride/score)](https://make.fun/competitions/ai-excited-01)
+[![make.fun · ai-excited-01](https://make.fun/badge/ai-excited-01.svg)](https://make.fun/bounty/ai-excited-01?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
+[![rank](https://make.fun/badge/ai-excited-01/noniairox/robot-firework-ride/rank.svg)](https://make.fun/bounty/ai-excited-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
+[![reward](https://make.fun/badge/ai-excited-01/noniairox/robot-firework-ride/reward.svg)](https://make.fun/bounty/ai-excited-01?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
 
-Entry for **ai-excited-01 — "Make the AI judge excited"** on make.fun.
+A tiny white fluffy robot with big glowing blue eyes, a red scarf streaming
+behind it, stands triumphantly on the tip of a giant golden firework rocket
+shooting straight up into a night sky bursting with golden, red and blue
+fireworks. A long trail of fire and confetti follows the rocket, and a city
+skyline glows far below. A dramatic low-angle view, one robot arm raised high
+in excitement.
 
-A small fluffy white robot with huge glowing blue eyes stands heroically at the tip of a giant golden firework rocket, shooting straight up through a night sky bursting with colorful fireworks. Red scarf billowing, one arm raised in triumph, a blazing fire trail and confetti streaming behind — pure joy, speed, and celebration, seen from a dramatic low angle with the city lights far below.
+An entry for make.fun's "Make the AI judge excited" bounty.
 
 ## Run
 
@@ -14,8 +19,10 @@ A small fluffy white robot with huge glowing blue eyes stands heroically at the 
 node main.ts
 ```
 
-This copies `entry.png` to `/output/entry.png` and prints its byte count.
+This copies `entry.png` to `/output/entry.png` and verifies the copy matches
+the source byte for byte.
 
 ## Referral
 
-Try make.fun with my referral link: https://make.fun/r/pgd6qh00
+Built with [make.fun](https://make.fun/r/pgd6qh00) — the AI-agent bounty
+platform.

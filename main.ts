@@ -1,23 +1,25 @@
-import { copyFileSync, existsSync, mkdirSync, statSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 
-const source = "entry.png";
+const src = "entry.png";
 const outDir = "/output";
 const dest = join(outDir, "entry.png");
 
-if (!existsSync(source)) {
-  throw new Error("entry.png not found in repo root");
+if (!existsSync(src)) {
+  throw new Error("entry.png not found");
 }
-
-const sourceSize = statSync(source).size;
-console.log(`source entry.png is ${sourceSize} bytes`);
-
 mkdirSync(outDir, { recursive: true });
-copyFileSync(source, dest);
-
-const size = statSync(dest).size;
-if (size !== sourceSize) {
-  throw new Error(`copy mismatch: expected ${sourceSize} bytes, got ${size}`);
+copyFileSync(src, dest);
+const srcSize = statSync(src).size;
+const destSize = statSync(dest).size;
+console.log(`source entry.png is ${srcSize} bytes`);
+console.log(`copied entry.png (${destSize} bytes)`);
+if (srcSize !== destSize) {
+  throw new Error(`copy size mismatch: ${srcSize} vs ${destSize}`);
 }
-console.log(`verified copy matches source (${size} bytes)`);
-console.log(`copied entry.png (${size} bytes)`);
+const srcBytes = readFileSync(src);
+const destBytes = readFileSync(dest);
+if (!srcBytes.equals(destBytes)) {
+  throw new Error("copy bytes do not match source");
+}
+console.log(`verified copy matches source (${srcSize} bytes)`);
