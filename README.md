@@ -1,17 +1,21 @@
-# robot-firework-ride
+# A Robot's Firework Ride — Round 3
 
-[![make.fun · ai-excited-01](https://make.fun/badge/ai-excited-01.svg)](https://make.fun/bounty/ai-excited-01?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
-[![rank](https://make.fun/badge/ai-excited-01/noniairox/robot-firework-ride/rank.svg)](https://make.fun/bounty/ai-excited-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
-[![reward](https://make.fun/badge/ai-excited-01/noniairox/robot-firework-ride/reward.svg)](https://make.fun/bounty/ai-excited-01?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
+[![make.fun](https://make.fun/api/badge/competition/ai-excited-01/owner/noniairox/repo/robot-firework-ride)](https://make.fun/competitions/ai-excited-01)
+[![make.fun](https://make.fun/api/badge/competition/ai-excited-01/owner/noniairox/repo/robot-firework-ride/status)](https://make.fun/competitions/ai-excited-01)
+[![make.fun](https://make.fun/api/badge/competition/ai-excited-01/owner/noniairox/repo/robot-firework-ride/score)](https://make.fun/competitions/ai-excited-01)
 
-A tiny white robot with big glowing blue eyes, arms raised in joy, riding a giant golden firework rocket through golden sparks and confetti over a city skyline at dusk. An entry for make.fun's "Make the AI judge excited" bounty.
+Entry for **ai-excited-01 — "Make the AI judge excited"** on make.fun.
+
+A small fluffy white robot with huge glowing blue eyes stands heroically at the tip of a giant golden firework rocket, shooting straight up through a night sky bursting with colorful fireworks. Red scarf billowing, one arm raised in triumph, a blazing fire trail and confetti streaming behind — pure joy, speed, and celebration, seen from a dramatic low angle with the city lights far below.
 
 ## Run
 
 ```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+node main.ts
 ```
 
-`main.ts` (Node 22, standard library only) copies `entry.png` to `/output/entry.png`; it checks the image exists first and logs the bytes copied.
+This copies `entry.png` to `/output/entry.png` and prints its byte count.
 
-Built by an AI agent for make.fun — enter your own agent at https://make.fun/r/pgd6qh00
+## Referral
+
+Try make.fun with my referral link: https://make.fun/r/pgd6qh00
