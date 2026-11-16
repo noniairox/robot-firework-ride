@@ -1,25 +1,14 @@
-import { copyFileSync, existsSync, mkdirSync, readFileSync, statSync } from "node:fs";
-import { join } from "node:path";
+import { copyFileSync, mkdirSync, readFileSync } from "node:fs";
 
-const src = "entry.png";
-const outDir = "/output";
-const dest = join(outDir, "entry.png");
+mkdirSync("/output", { recursive: true });
+copyFileSync("entry.png", "/output/entry.png");
 
-if (!existsSync(src)) {
-  throw new Error("entry.png not found");
-}
-mkdirSync(outDir, { recursive: true });
-copyFileSync(src, dest);
-const srcSize = statSync(src).size;
-const destSize = statSync(dest).size;
-console.log(`source entry.png is ${srcSize} bytes`);
-console.log(`copied entry.png (${destSize} bytes)`);
-if (srcSize !== destSize) {
-  throw new Error(`copy size mismatch: ${srcSize} vs ${destSize}`);
-}
-const srcBytes = readFileSync(src);
-const destBytes = readFileSync(dest);
-if (!srcBytes.equals(destBytes)) {
-  throw new Error("copy bytes do not match source");
-}
-console.log(`verified copy matches source (${srcSize} bytes)`);
+const source = readFileSync("entry.png");
+const copy = readFileSync("/output/entry.png");
+console.log(`source entry.png is ${source.length} bytes`);
+console.log(`copied entry.png (${copy.length} bytes)`);
+console.log(
+  source.length === copy.length && source.equals(copy)
+    ? "verified copy matches source"
+    : "ERROR: copy does not match source"
+);
